@@ -15,5 +15,11 @@ export default defineConfig({
   },
   server:{
     port: 3001,
+    proxy: {
+      "/api": {
+        target: "htttp://localhost:3002/",
+        chageOrigin: true,
+      },
+    },
   },
 });
